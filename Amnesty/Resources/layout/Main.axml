@@ -2,112 +2,94 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:padding="15dp">
     <TextView
-        android:text="@string/voornaam"
+        android:text="Persoonlijke informatie"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText1" />
+        android:id="@+id/TopLabelPersonal" />
     <TextView
-        android:text="@string/naam"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/firstname"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/lblFirstname" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2" />
+        android:id="@+id/txtFirstname"
+        android:hint="John" />
+    <TextView
+        android:text="@string/lastname"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblLastname" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLastname"
+        android:hint="Doe" />
     <TextView
         android:text="@string/email"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
-    <EditText
-        android:inputType="textEmailAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText3" />
-    <TextView
-        android:text="@string/rekeningnr"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
+        android:id="@+id/lblEmail" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText8" />
+        android:id="@+id/txtEmail"
+        android:hint="goede@doel.be" />
     <TextView
-        android:text="@string/geboorte"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/birthdate"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
-    <TextView
-        android:text="@string/dag"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
+        android:id="@+id/lblBirthdate"
+        android:autoText="false" />
     <EditText
         android:inputType="date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText4" />
+        android:id="@+id/txtBirthdate"
+        android:hint="21/05/1984" />
     <TextView
-        android:text="@string/maand"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/bankaccount"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
+        android:id="@+id/lblBankaccount" />
     <EditText
-        android:inputType="date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText5" />
+        android:id="@+id/txtBankaccount"
+        android:hint="BE16 1258 6845 1592" />
     <TextView
-        android:text="@string/jaar"
+        android:text="Welk bedrag wil je storten?"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
-    <EditText
-        android:inputType="date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText6" />
+        android:id="@+id/textView5" />
     <TextView
-        android:text="@string/bedrag"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/amount"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
+        android:id="@+id/lblAmount" />
     <EditText
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText7" />
-    <TextView
-        android:text="@string/akkoord"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4" />
-    <CheckBox
-        android:text="CheckBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox1" />
+        android:id="@+id/txtAmount"
+        android:gravity="center" />
     <Button
-        android:id="@+id/myButton"
+        android:text="Ga verder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello" />
+        android:id="@+id/btnConfirm" />
 </LinearLayout>

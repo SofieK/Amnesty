@@ -1,15 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="akkoord">Akkoord</string>
-	<string name="bedrag">Stortingsbedrag</string>
-	<string name="jaar">jj</string>
-	<string name="maand">mm</string>
-	<string name="dag">dd</string>
-	<string name="geboorte">Geboortedatum</string>
-	<string name="rekeningnr">Rekeningnummer</string>
-	<string name="email">E-mail</string>
-	<string name="naam">Naam</string>
-	<string name="voornaam">Voornaam</string>
-	<string name="hello">Doneer nu!</string>
-	<string name="app_name">Amnesty</string>
+    <string name="app_name">Amnesty</string>
+    <string name="firstname">Naam</string>
+    <string name="lastname">Achternaam</string>
+    <string name="email">E-mailadres</string>
+    <string name="birthdate">Geboortedatum</string>
+    <string name="bankaccount">Rekeningnummer</string>
+    <string name="amount">Bedrag</string>
 </resources>

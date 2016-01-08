@@ -22,11 +22,25 @@ namespace Amnesty
 			SetContentView (Resource.Layout.Confirmation);
 
 			// Create your application here
-			string myText = Intent.GetStringExtra ("firstname") ?? "Data not available";
+			string firstname = Intent.GetStringExtra ("firstname") ?? "Data not available";
+			string lastname = Intent.GetStringExtra ("lastname") ?? "Data not available";
+			string email = Intent.GetStringExtra ("email") ?? "Data not available";
+			string birthdate = Intent.GetStringExtra ("birthdate") ?? "Data not available";
+			string bankaccount = Intent.GetStringExtra ("bankaccount") ?? "Data not available";
+			string amount = Intent.GetStringExtra ("amount") ?? "Data not available";
 
-			var textfield = (TextView) FindViewById(Resource.Id.testView1);
-			textfield.Text = myText;
-
+			var txtFirstname = (TextView) FindViewById(Resource.Id.txtFirstname);
+			var txtLastname = (TextView) FindViewById(Resource.Id.txtLastname);
+			var txtEmail = (TextView) FindViewById(Resource.Id.txtEmail);
+			var txtBirthdate = (TextView) FindViewById(Resource.Id.txtBirthdate);
+			var txtBankaccount = (TextView) FindViewById(Resource.Id.txtBankaccount);
+			var txtAmount = (TextView) FindViewById(Resource.Id.txtAmount);
+			txtFirstname.Text = firstname;
+			txtLastname.Text = lastname;
+			txtEmail.Text = email;
+			txtBirthdate.Text = birthdate;
+			txtBankaccount.Text = bankaccount;
+			txtAmount.Text = amount;
 		}
 	}
 }
