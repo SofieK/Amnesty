@@ -5,7 +5,7 @@ using Android.Content;
 
 namespace Amnesty
 {
-	[Activity (Label = "Amnesty", MainLauncher = true, Icon = "@mipmap/icon")]
+	[Activity (Label = "Amnesty International", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class MainActivity : Activity
 	{
 

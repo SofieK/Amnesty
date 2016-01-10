@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace Amnesty
 {
-	[Activity (Label = "ThankyouActivity")]			
+	[Activity (Label = "Klaar!")]			
 	public class ThankyouActivity : Activity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)

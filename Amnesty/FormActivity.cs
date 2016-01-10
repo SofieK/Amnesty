@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace Amnesty
 {
-	[Activity (Label = "FormActivity")]			
+	[Activity (Label = "Vul je gegevens in")]			
 	public class FormActivity : Activity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)

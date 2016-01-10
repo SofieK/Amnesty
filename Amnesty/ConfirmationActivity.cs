@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace Amnesty
 {
-	[Activity (Label = "ConfirmationActivity")]			
+	[Activity (Label = "Bevestiging")]			
 	public class ConfirmationActivity : Activity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)
