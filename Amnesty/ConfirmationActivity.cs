@@ -41,6 +41,38 @@ namespace Amnesty
 			txtBirthdate.Text = birthdate;
 			txtBankaccount.Text = bankaccount;
 			txtAmount.Text = amount;
+
+			Button btnChange = FindViewById<Button> (Resource.Id.btnChange);
+
+			btnChange.Click += delegate {
+				var FormActivity = new Intent(this, typeof(FormActivity));
+				FormActivity.PutExtra ("firstname", firstname);
+				FormActivity.PutExtra ("lastname", lastname);
+				FormActivity.PutExtra ("email", email);
+				FormActivity.PutExtra ("birthdate", birthdate);
+				FormActivity.PutExtra ("bankaccount", bankaccount);
+				FormActivity.PutExtra ("amount", amount);
+				StartActivity (FormActivity);
+			};
+
+			// user confirms and donates
+			Button btnDonate = FindViewById<Button> (Resource.Id.btnDonate);
+
+			btnDonate.Enabled = false;
+
+			CheckBox checkbox = FindViewById<CheckBox>(Resource.Id.chkConfirm);
+			checkbox.Click += (o, e) => {
+				if (checkbox.Checked)
+					btnDonate.Enabled = true;
+				else
+					btnDonate.Enabled = false;
+			};
+
+			btnDonate.Click += delegate {
+				var ThankyouActivity = new Intent(this, typeof(ThankyouActivity));
+				ThankyouActivity.PutExtra ("firstname", firstname);
+				StartActivity(ThankyouActivity);
+			};
 		}
 	}
 }

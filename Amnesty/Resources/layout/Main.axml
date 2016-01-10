@@ -5,91 +5,19 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:padding="15dp">
+    android:padding="15dp"
+    android:gravity="center">
     <TextView
-        android:text="Persoonlijke informatie"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Amnesty International"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/TopLabelPersonal" />
-    <TextView
-        android:text="@string/firstname"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblFirstname" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtFirstname"
-        android:hint="John" />
-    <TextView
-        android:text="@string/lastname"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblLastname" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtLastname"
-        android:hint="Doe" />
-    <TextView
-        android:text="@string/email"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblEmail" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtEmail"
-        android:hint="goede@doel.be" />
-    <TextView
-        android:text="@string/birthdate"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblBirthdate"
-        android:autoText="false" />
-    <EditText
-        android:inputType="date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtBirthdate"
-        android:hint="21/05/1984" />
-    <TextView
-        android:text="@string/bankaccount"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblBankaccount" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtBankaccount"
-        android:hint="BE16 1258 6845 1592" />
-    <TextView
-        android:text="Welk bedrag wil je storten?"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView5" />
-    <TextView
-        android:text="@string/amount"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblAmount" />
-    <EditText
-        android:inputType="numberDecimal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtAmount"
-        android:gravity="center" />
+        android:id="@+id/txtCompanyName"
+        android:gravity="center"
+        android:layout_marginBottom="25dp" />
     <Button
-        android:text="Ga verder"
+        android:text="Doneer nu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnConfirm" />
+        android:id="@+id/btnDonate" />
 </LinearLayout>

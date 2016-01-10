@@ -20,7 +20,19 @@ namespace Amnesty
 		{
 			base.OnCreate (savedInstanceState);
 
-			// Create your application here
+			// Set our view from the "main" layout resource
+			SetContentView (Resource.Layout.Thankyou);
+
+			Button btnHome = FindViewById<Button> (Resource.Id.btnHome);
+			var txtThanks = FindViewById<TextView> (Resource.Id.txtThanks);
+			string firstname = Intent.GetStringExtra ("firstname") ?? "";
+
+			txtThanks.Text = "Bedankt voor uw donatie\r\n" + firstname;
+
+			btnHome.Click += delegate {
+				var MainActivity = new Intent (this, typeof(MainActivity));
+				StartActivity(MainActivity);
+			};
 		}
 	}
 }

@@ -44,20 +44,23 @@ namespace Amnesty
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f05000f
-			public const int DonateButton = 2131034127;
-			
 			// aapt resource value: 0x7f050010
 			public const int TopLabelPersonal = 2131034128;
+			
+			// aapt resource value: 0x7f05000d
+			public const int btnChange = 2131034125;
 			
 			// aapt resource value: 0x7f050017
 			public const int btnConfirm = 2131034135;
 			
-			// aapt resource value: 0x7f05000d
-			public const int button1 = 2131034125;
+			// aapt resource value: 0x7f05000f
+			public const int btnDonate = 2131034127;
+			
+			// aapt resource value: 0x7f05001a
+			public const int btnHome = 2131034138;
 			
 			// aapt resource value: 0x7f05000e
-			public const int checkBox1 = 2131034126;
+			public const int chkConfirm = 2131034126;
 			
 			// aapt resource value: 0x7f050016
 			public const int lblAmount = 2131034134;
@@ -107,6 +110,9 @@ namespace Amnesty
 			// aapt resource value: 0x7f050008
 			public const int txtBirthdate = 2131034120;
 			
+			// aapt resource value: 0x7f050018
+			public const int txtCompanyName = 2131034136;
+			
 			// aapt resource value: 0x7f050006
 			public const int txtEmail = 2131034118;
 			
@@ -115,6 +121,9 @@ namespace Amnesty
 			
 			// aapt resource value: 0x7f050004
 			public const int txtLastname = 2131034116;
+			
+			// aapt resource value: 0x7f050019
+			public const int txtThanks = 2131034137;
 			
 			static Id()
 			{
@@ -133,10 +142,13 @@ namespace Amnesty
 			public const int Confirmation = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int Form = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Thankyou = 2130903042;
+			public const int Main = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int Thankyou = 2130903043;
 			
 			static Layout()
 			{
