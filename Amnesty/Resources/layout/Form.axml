@@ -123,6 +123,13 @@
                 android:layout_width="329.5dp"
                 android:layout_height="match_parent" />
         </LinearLayout>
+        <TextView
+            android:text="Niet alles in ingevuld"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtFormError"
+            android:textColor="#ffe53935" />
         <Button
             android:text="Ga verder"
             android:layout_width="match_parent"
