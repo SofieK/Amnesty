@@ -25,17 +25,25 @@ namespace Amnesty
 			string firstname = Intent.GetStringExtra ("firstname") ?? "Data not available";
 			string lastname = Intent.GetStringExtra ("lastname") ?? "Data not available";
 			string email = Intent.GetStringExtra ("email") ?? "Data not available";
+			string streetnr = Intent.GetStringExtra ("streetnr") ?? "Data not available";
+			string postalcode = Intent.GetStringExtra ("postalcode") ?? "Data not available";
+			string town = Intent.GetStringExtra ("town") ?? "Data not available";
 			string bankaccount = Intent.GetStringExtra ("bankaccount") ?? "Data not available";
 			string amount = Intent.GetStringExtra ("amount") ?? "Data not available";
 
 			var txtFirstname = (TextView) FindViewById(Resource.Id.txtFirstname);
 			var txtLastname = (TextView) FindViewById(Resource.Id.txtLastname);
 			var txtEmail = (TextView) FindViewById(Resource.Id.txtEmail);
+			var txtStreetNr = (TextView) FindViewById(Resource.Id.txtStreetNr);
+			var txtPostalCode = (TextView) FindViewById(Resource.Id.txtPostalCode);
+			var txtTown = (TextView) FindViewById(Resource.Id.txtTown);
 			var txtBankaccount = (TextView) FindViewById(Resource.Id.txtBankaccount);
 			var txtAmount = (TextView) FindViewById(Resource.Id.txtAmount);
 			txtFirstname.Text = firstname;
 			txtLastname.Text = lastname;
 			txtEmail.Text = email;
+			txtStreetNr.Text = streetnr;
+			txtTown.Text = postalcode + " " + town;
 			txtBankaccount.Text = bankaccount;
 			txtAmount.Text = amount;
 
@@ -46,6 +54,9 @@ namespace Amnesty
 				FormActivity.PutExtra ("firstname", firstname);
 				FormActivity.PutExtra ("lastname", lastname);
 				FormActivity.PutExtra ("email", email);
+				FormActivity.PutExtra ("streetnr", streetnr);
+				FormActivity.PutExtra ("postalcode", postalcode);
+				FormActivity.PutExtra ("town", town);
 				FormActivity.PutExtra ("bankaccount", bankaccount);
 				FormActivity.PutExtra ("amount", amount);
 				StartActivity (FormActivity);

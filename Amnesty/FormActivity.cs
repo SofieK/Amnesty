@@ -30,35 +30,50 @@ namespace Amnesty
 			Button button = FindViewById<Button> (Resource.Id.btnConfirm);
 
 			// Get old user info when user wants to change something
-			string oldfirstname = Intent.GetStringExtra ("firstname") ?? "";
-			string oldlastname = Intent.GetStringExtra ("lastname") ?? "";
-			string oldemail = Intent.GetStringExtra ("email") ?? "";
-			string oldbankaccount = Intent.GetStringExtra ("bankaccount") ?? "";
-			string oldamount = Intent.GetStringExtra ("amount") ?? "";
+			string firstname = Intent.GetStringExtra ("firstname") ?? "";
+			string lastname = Intent.GetStringExtra ("lastname") ?? "";
+			string email = Intent.GetStringExtra ("email") ?? "";
+			string streetnr = Intent.GetStringExtra ("streetnr") ?? "";
+			string postalcode = Intent.GetStringExtra ("postalcode") ?? "";
+			string town = Intent.GetStringExtra ("town") ?? "";
+			string bankaccount = Intent.GetStringExtra ("bankaccount") ?? "";
+			string amount = Intent.GetStringExtra ("amount") ?? "";
 
 			var txtFirstname = (EditText) FindViewById(Resource.Id.txtFirstname);
 			var txtLastname = (EditText) FindViewById(Resource.Id.txtLastname);
 			var txtEmail = (EditText) FindViewById(Resource.Id.txtEmail);
+			var txtStreetNr = (EditText) FindViewById(Resource.Id.txtStreetNr);
+			var txtPostalCode = (EditText) FindViewById(Resource.Id.txtPostalCode);
+			var txtTown = (EditText) FindViewById(Resource.Id.txtTown);
 			var txtBankaccount = (EditText) FindViewById(Resource.Id.txtBankaccount);
 			var txtAmount = (EditText) FindViewById(Resource.Id.txtAmount);
-			txtFirstname.Text = oldfirstname;
-			txtLastname.Text = oldlastname;
-			txtEmail.Text = oldemail;
-			txtBankaccount.Text = oldbankaccount;
-			txtAmount.Text = oldamount;
+			txtFirstname.Text = firstname;
+			txtLastname.Text = lastname;
+			txtEmail.Text = email;
+			txtStreetNr.Text = streetnr;
+			txtPostalCode.Text = postalcode;
+			txtTown.Text = town;
+			txtBankaccount.Text = bankaccount;
+			txtAmount.Text = amount;
 
 			// go to confirmation screen to display user info.
 			button.Click += delegate {
-				var firstname = FindViewById<EditText> (Resource.Id.txtFirstname).Text;
-				var lastname = FindViewById<EditText> (Resource.Id.txtLastname).Text;
-				var email = FindViewById<EditText> (Resource.Id.txtEmail).Text;
-				var bankaccount = FindViewById<EditText> (Resource.Id.txtBankaccount).Text;
-				var amount = FindViewById<EditText> (Resource.Id.txtAmount).Text;
+				firstname = FindViewById<EditText> (Resource.Id.txtFirstname).Text;
+				lastname = FindViewById<EditText> (Resource.Id.txtLastname).Text;
+				email = FindViewById<EditText> (Resource.Id.txtEmail).Text;
+				streetnr = FindViewById<EditText> (Resource.Id.txtStreetNr).Text;
+				postalcode = FindViewById<EditText> (Resource.Id.txtPostalCode).Text;
+				town = FindViewById<EditText> (Resource.Id.txtTown).Text;
+				bankaccount = FindViewById<EditText> (Resource.Id.txtBankaccount).Text;
+				amount = FindViewById<EditText> (Resource.Id.txtAmount).Text;
 
 				var ConfirmationActivity = new Intent (this, typeof(ConfirmationActivity));
 				ConfirmationActivity.PutExtra ("firstname", firstname);
 				ConfirmationActivity.PutExtra ("lastname", lastname);
 				ConfirmationActivity.PutExtra ("email", email);
+				ConfirmationActivity.PutExtra ("streetnr", streetnr);
+				ConfirmationActivity.PutExtra ("postalcode", postalcode);
+				ConfirmationActivity.PutExtra ("town", town);
 				ConfirmationActivity.PutExtra ("bankaccount", bankaccount);
 				ConfirmationActivity.PutExtra ("amount", amount);
 				StartActivity (ConfirmationActivity);

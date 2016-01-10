@@ -7,12 +7,6 @@
     android:minHeight="25px"
     android:padding="15dp">
     <TextView
-        android:text="Kloppen deze gegevens?"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
-    <TextView
         android:text="Naam"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
@@ -45,6 +39,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtEmail" />
+    <TextView
+        android:text="Adres"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtStreetNr" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTown" />
     <TextView
         android:text="@string/bankaccount"
         android:textAppearance="?android:attr/textAppearanceSmall"
