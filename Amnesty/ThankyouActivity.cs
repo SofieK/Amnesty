@@ -25,9 +25,12 @@ namespace Amnesty
 
 			Button btnHome = FindViewById<Button> (Resource.Id.btnHome);
 			var txtThanks = FindViewById<TextView> (Resource.Id.txtThanks);
+			var txtDonatorEmail = FindViewById<TextView> (Resource.Id.txtDonatorEmail);
 			string firstname = Intent.GetStringExtra ("firstname") ?? "";
+			string email = Intent.GetStringExtra ("email") ?? "";
 
 			txtThanks.Text = "Bedankt voor uw donatie\r\n" + firstname;
+			txtDonatorEmail.Text = email;
 
 			btnHome.Click += delegate {
 				var MainActivity = new Intent (this, typeof(MainActivity));

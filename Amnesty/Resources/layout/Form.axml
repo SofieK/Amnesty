@@ -70,7 +70,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtPostalCode"
-            android:hint="Postcode" />
+            android:hint="Postcode"
+            android:maxLength="4" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,8 +88,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtBankaccount"
-            android:hint="BE16 1258 6845 1592"
-            android:singleLine="true" />
+            android:hint="BE16125868451592"
+            android:singleLine="true"
+            android:maxLength="16" />
         <TextView
             android:text="Welk bedrag wil je storten?"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -101,13 +103,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/lblAmount" />
-        <EditText
-            android:inputType="numberDecimal"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtAmount"
-            android:gravity="center"
-            android:singleLine="true" />
+            android:id="@+id/linearLayout1">
+            <TextView
+                android:text="€"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="24.5dp"
+                android:layout_height="match_parent"
+                android:id="@+id/textView7"
+                android:gravity="center" />
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/txtAmount"
+                android:gravity="center"
+                android:singleLine="true"
+                android:layout_width="329.5dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
         <Button
             android:text="Ga verder"
             android:layout_width="match_parent"

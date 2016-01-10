@@ -56,6 +56,55 @@ namespace Amnesty
 			txtBankaccount.Text = bankaccount;
 			txtAmount.Text = amount;
 
+			//validation
+			txtFirstname.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtFirstname.Text.ToString())){
+					txtFirstname.Error = "Verplicht";
+				}
+			};
+
+			txtLastname.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtLastname.Text.ToString())){
+					txtLastname.Error = "Verplicht";
+				}
+			};
+
+			txtEmail.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtEmail.Text.ToString())){
+					txtEmail.Error = "Verplicht";
+				}
+			};
+
+			txtStreetNr.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtStreetNr.Text.ToString())){
+					txtStreetNr.Error = "Verplicht";
+				}
+			};
+
+			txtPostalCode.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtPostalCode.Text.ToString())){
+					txtPostalCode.Error = "Verplicht";
+				}
+			};
+
+			txtTown.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtTown.Text.ToString())){
+					txtTown.Error = "Verplicht";
+				}
+			};
+
+			txtBankaccount.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtBankaccount.Text.ToString())){
+					txtBankaccount.Error = "Verplicht";
+				}
+			};
+
+			txtAmount.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtAmount.Text.ToString())){
+					txtAmount.Error = "Verplicht";
+				}
+			};
+
 			// go to confirmation screen to display user info.
 			button.Click += delegate {
 				firstname = FindViewById<EditText> (Resource.Id.txtFirstname).Text;
