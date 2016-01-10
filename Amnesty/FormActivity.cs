@@ -109,9 +109,21 @@ namespace Amnesty
 
 			// go to confirmation screen to display user info.
 			button.Click += delegate {
-				// if (String.IsNullOrWhiteSpace(txtFirstname.Text.ToString()) || String.IsNullOrWhiteSpace(txtLastname.Text.ToString())|| String.IsNullOrWhiteSpace(txtEmail.Text.ToString()) || !txtEmail.Text.Contains("@") || !txtEmail.Text.Contains(".") || String.IsNullOrWhiteSpace(txtStreetNr.Text.ToString()) || String.IsNullOrWhiteSpace(txtPostalCode.Text.ToString()) || String.IsNullOrWhiteSpace(txtTown.Text.ToString()) || String.IsNullOrWhiteSpace(txtBankaccount.Text.ToString()) || txtAmount.Text.ToString().Length < 16 || String.IsNullOrWhiteSpace(txtAmount.Text.ToString())) {
-				//	txtFormError.Visibility = ViewStates.Visible;
-				// } else {
+				if (String.IsNullOrWhiteSpace(txtFirstname.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtLastname.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtEmail.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtStreetNr.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtPostalCode.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtTown.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtBankaccount.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtAmount.Text.ToString())
+					|| txtEmail.Text.Contains("@") == false
+					|| txtEmail.Text.Contains(".") == false
+					//|| txtPostalCode.Text.ToString().Length < 4
+					//|| txtBankaccount.Text..ToString().Length < 16
+				) {
+					txtFormError.Visibility = ViewStates.Visible;
+				} else {
 					firstname = FindViewById<EditText> (Resource.Id.txtFirstname).Text;
 					lastname = FindViewById<EditText> (Resource.Id.txtLastname).Text;
 					email = FindViewById<EditText> (Resource.Id.txtEmail).Text;
@@ -131,7 +143,7 @@ namespace Amnesty
 					ConfirmationActivity.PutExtra ("bankaccount", bankaccount);
 					ConfirmationActivity.PutExtra ("amount", amount);
 					StartActivity (ConfirmationActivity);
-				// }
+				}
 			};
 		}
 	}
