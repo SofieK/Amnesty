@@ -33,20 +33,17 @@ namespace Amnesty
 			string oldfirstname = Intent.GetStringExtra ("firstname") ?? "";
 			string oldlastname = Intent.GetStringExtra ("lastname") ?? "";
 			string oldemail = Intent.GetStringExtra ("email") ?? "";
-			string oldbirthdate = Intent.GetStringExtra ("birthdate") ?? "";
 			string oldbankaccount = Intent.GetStringExtra ("bankaccount") ?? "";
 			string oldamount = Intent.GetStringExtra ("amount") ?? "";
 
 			var txtFirstname = (EditText) FindViewById(Resource.Id.txtFirstname);
 			var txtLastname = (EditText) FindViewById(Resource.Id.txtLastname);
 			var txtEmail = (EditText) FindViewById(Resource.Id.txtEmail);
-			var txtBirthdate = (EditText) FindViewById(Resource.Id.txtBirthdate);
 			var txtBankaccount = (EditText) FindViewById(Resource.Id.txtBankaccount);
 			var txtAmount = (EditText) FindViewById(Resource.Id.txtAmount);
 			txtFirstname.Text = oldfirstname;
 			txtLastname.Text = oldlastname;
 			txtEmail.Text = oldemail;
-			txtBirthdate.Text = oldbirthdate;
 			txtBankaccount.Text = oldbankaccount;
 			txtAmount.Text = oldamount;
 
@@ -55,7 +52,6 @@ namespace Amnesty
 				var firstname = FindViewById<EditText> (Resource.Id.txtFirstname).Text;
 				var lastname = FindViewById<EditText> (Resource.Id.txtLastname).Text;
 				var email = FindViewById<EditText> (Resource.Id.txtEmail).Text;
-				var birthdate = FindViewById<EditText> (Resource.Id.txtBirthdate).Text;
 				var bankaccount = FindViewById<EditText> (Resource.Id.txtBankaccount).Text;
 				var amount = FindViewById<EditText> (Resource.Id.txtAmount).Text;
 
@@ -63,7 +59,6 @@ namespace Amnesty
 				ConfirmationActivity.PutExtra ("firstname", firstname);
 				ConfirmationActivity.PutExtra ("lastname", lastname);
 				ConfirmationActivity.PutExtra ("email", email);
-				ConfirmationActivity.PutExtra ("birthdate", birthdate);
 				ConfirmationActivity.PutExtra ("bankaccount", bankaccount);
 				ConfirmationActivity.PutExtra ("amount", amount);
 				StartActivity (ConfirmationActivity);

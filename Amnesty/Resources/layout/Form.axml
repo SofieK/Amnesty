@@ -46,19 +46,6 @@
         android:id="@+id/txtEmail"
         android:hint="goede@doel.be" />
     <TextView
-        android:text="@string/birthdate"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblBirthdate"
-        android:autoText="false" />
-    <EditText
-        android:inputType="date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtBirthdate"
-        android:hint="21/05/1984" />
-    <TextView
         android:text="@string/bankaccount"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
