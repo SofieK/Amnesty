@@ -120,9 +120,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/lblAmount"
             android:textStyle="bold" />
-        <EditText
-            android:inputType="numberDecimal"
-            android:id="@+id/lblAmount" />
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
