@@ -43,7 +43,7 @@ namespace Amnesty
 			txtStreetNr.Text = streetnr;
 			txtTown.Text = postalcode + " " + town;
 			txtBankaccount.Text = bankaccount;
-			txtAmount.Text = "€" + amount;
+			txtAmount.Text = "€ " + amount;
 
 			Button btnChange = FindViewById<Button> (Resource.Id.btnChange);
 
@@ -76,6 +76,7 @@ namespace Amnesty
 			btnDonate.Click += delegate {
 				var ThankyouActivity = new Intent(this, typeof(ThankyouActivity));
 				ThankyouActivity.PutExtra ("firstname", firstname);
+				ThankyouActivity.PutExtra ("email", email);
 				StartActivity(ThankyouActivity);
 			};
 		}

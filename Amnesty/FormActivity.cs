@@ -47,6 +47,8 @@ namespace Amnesty
 			var txtTown = (EditText) FindViewById(Resource.Id.txtTown);
 			var txtBankaccount = (EditText) FindViewById(Resource.Id.txtBankaccount);
 			var txtAmount = (EditText) FindViewById(Resource.Id.txtAmount);
+			var txtFormError = (TextView) FindViewById(Resource.Id.txtFormError);
+			txtFormError.Visibility = ViewStates.Gone;
 			txtFirstname.Text = firstname;
 			txtLastname.Text = lastname;
 			txtEmail.Text = email;
@@ -56,27 +58,92 @@ namespace Amnesty
 			txtBankaccount.Text = bankaccount;
 			txtAmount.Text = amount;
 
+			//validation
+			txtFirstname.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtFirstname.Text.ToString())){
+					txtFirstname.Error = "Verplicht";
+				}
+			};
+
+			txtLastname.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtLastname.Text.ToString())){
+					txtLastname.Error = "Verplicht";
+				}
+			};
+
+			txtEmail.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtEmail.Text.ToString())){
+					txtEmail.Error = "Verplicht";
+				}
+			};
+
+			txtStreetNr.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtStreetNr.Text.ToString())){
+					txtStreetNr.Error = "Verplicht";
+				}
+			};
+
+			txtPostalCode.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtPostalCode.Text.ToString())){
+					txtPostalCode.Error = "Verplicht";
+				}
+			};
+
+			txtTown.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtTown.Text.ToString())){
+					txtTown.Error = "Verplicht";
+				}
+			};
+
+			txtBankaccount.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtBankaccount.Text.ToString())){
+					txtBankaccount.Error = "Verplicht";
+				}
+			};
+
+			txtAmount.FocusChange += delegate {
+				if (String.IsNullOrWhiteSpace(txtAmount.Text.ToString())){
+					txtAmount.Error = "Verplicht";
+				}
+			};
+
 			// go to confirmation screen to display user info.
 			button.Click += delegate {
-				firstname = FindViewById<EditText> (Resource.Id.txtFirstname).Text;
-				lastname = FindViewById<EditText> (Resource.Id.txtLastname).Text;
-				email = FindViewById<EditText> (Resource.Id.txtEmail).Text;
-				streetnr = FindViewById<EditText> (Resource.Id.txtStreetNr).Text;
-				postalcode = FindViewById<EditText> (Resource.Id.txtPostalCode).Text;
-				town = FindViewById<EditText> (Resource.Id.txtTown).Text;
-				bankaccount = FindViewById<EditText> (Resource.Id.txtBankaccount).Text;
-				amount = FindViewById<EditText> (Resource.Id.txtAmount).Text;
+				if (String.IsNullOrWhiteSpace(txtFirstname.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtLastname.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtEmail.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtStreetNr.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtPostalCode.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtTown.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtBankaccount.Text.ToString())
+					|| String.IsNullOrWhiteSpace(txtAmount.Text.ToString())
+					|| txtEmail.Text.Contains("@") == false
+					|| txtEmail.Text.Contains(".") == false
+					//|| txtPostalCode.Text.ToString().Length < 4
+					//|| txtBankaccount.Text..ToString().Length < 16
+				) {
+					txtFormError.Visibility = ViewStates.Visible;
+				} else {
+					firstname = FindViewById<EditText> (Resource.Id.txtFirstname).Text;
+					lastname = FindViewById<EditText> (Resource.Id.txtLastname).Text;
+					email = FindViewById<EditText> (Resource.Id.txtEmail).Text;
+					streetnr = FindViewById<EditText> (Resource.Id.txtStreetNr).Text;
+					postalcode = FindViewById<EditText> (Resource.Id.txtPostalCode).Text;
+					town = FindViewById<EditText> (Resource.Id.txtTown).Text;
+					bankaccount = FindViewById<EditText> (Resource.Id.txtBankaccount).Text;
+					amount = FindViewById<EditText> (Resource.Id.txtAmount).Text;
 
-				var ConfirmationActivity = new Intent (this, typeof(ConfirmationActivity));
-				ConfirmationActivity.PutExtra ("firstname", firstname);
-				ConfirmationActivity.PutExtra ("lastname", lastname);
-				ConfirmationActivity.PutExtra ("email", email);
-				ConfirmationActivity.PutExtra ("streetnr", streetnr);
-				ConfirmationActivity.PutExtra ("postalcode", postalcode);
-				ConfirmationActivity.PutExtra ("town", town);
-				ConfirmationActivity.PutExtra ("bankaccount", bankaccount);
-				ConfirmationActivity.PutExtra ("amount", amount);
-				StartActivity (ConfirmationActivity);
+					var ConfirmationActivity = new Intent (this, typeof(ConfirmationActivity));
+					ConfirmationActivity.PutExtra ("firstname", firstname);
+					ConfirmationActivity.PutExtra ("lastname", lastname);
+					ConfirmationActivity.PutExtra ("email", email);
+					ConfirmationActivity.PutExtra ("streetnr", streetnr);
+					ConfirmationActivity.PutExtra ("postalcode", postalcode);
+					ConfirmationActivity.PutExtra ("town", town);
+					ConfirmationActivity.PutExtra ("bankaccount", bankaccount);
+					ConfirmationActivity.PutExtra ("amount", amount);
+					StartActivity (ConfirmationActivity);
+				}
 			};
 		}
 	}

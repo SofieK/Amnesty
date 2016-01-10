@@ -69,20 +69,20 @@ namespace Amnesty
 			// aapt resource value: 0x7f06000c
 			public const int btnChange = 2131099660;
 			
-			// aapt resource value: 0x7f060019
-			public const int btnConfirm = 2131099673;
+			// aapt resource value: 0x7f06001b
+			public const int btnConfirm = 2131099675;
 			
 			// aapt resource value: 0x7f06000e
 			public const int btnDonate = 2131099662;
 			
-			// aapt resource value: 0x7f06001c
-			public const int btnHome = 2131099676;
+			// aapt resource value: 0x7f060020
+			public const int btnHome = 2131099680;
 			
 			// aapt resource value: 0x7f06000d
 			public const int chkConfirm = 2131099661;
 			
-			// aapt resource value: 0x7f06001a
-			public const int imageView1 = 2131099674;
+			// aapt resource value: 0x7f06001c
+			public const int imageView1 = 2131099676;
 			
 			// aapt resource value: 0x7f060018
 			public const int lblAmount = 2131099672;
@@ -99,8 +99,14 @@ namespace Amnesty
 			// aapt resource value: 0x7f060012
 			public const int lblLastname = 2131099666;
 			
+			// aapt resource value: 0x7f060019
+			public const int linearLayout1 = 2131099673;
+			
 			// aapt resource value: 0x7f06000f
 			public const int scroll = 2131099663;
+			
+			// aapt resource value: 0x7f06001e
+			public const int textView1 = 2131099678;
 			
 			// aapt resource value: 0x7f060001
 			public const int textView2 = 2131099649;
@@ -126,11 +132,17 @@ namespace Amnesty
 			// aapt resource value: 0x7f060009
 			public const int txtBankaccount = 2131099657;
 			
+			// aapt resource value: 0x7f06001f
+			public const int txtDonatorEmail = 2131099679;
+			
 			// aapt resource value: 0x7f060004
 			public const int txtEmail = 2131099652;
 			
 			// aapt resource value: 0x7f060011
 			public const int txtFirstname = 2131099665;
+			
+			// aapt resource value: 0x7f06001a
+			public const int txtFormError = 2131099674;
 			
 			// aapt resource value: 0x7f060013
 			public const int txtLastname = 2131099667;
@@ -144,8 +156,8 @@ namespace Amnesty
 			// aapt resource value: 0x7f060006
 			public const int txtStreetNr = 2131099654;
 			
-			// aapt resource value: 0x7f06001b
-			public const int txtThanks = 2131099675;
+			// aapt resource value: 0x7f06001d
+			public const int txtThanks = 2131099677;
 			
 			// aapt resource value: 0x7f060007
 			public const int txtTown = 2131099655;
