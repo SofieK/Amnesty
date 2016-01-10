@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Amnesty</string>
-    <string name="firstname">Naam</string>
+    <string name="firstname">Voornaam</string>
     <string name="lastname">Achternaam</string>
     <string name="email">E-mailadres</string>
     <string name="birthdate">Geboortedatum</string>

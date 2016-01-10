@@ -31,21 +31,19 @@ namespace Amnesty
 			string bankaccount = Intent.GetStringExtra ("bankaccount") ?? "Data not available";
 			string amount = Intent.GetStringExtra ("amount") ?? "Data not available";
 
-			var txtFirstname = (TextView) FindViewById(Resource.Id.txtFirstname);
-			var txtLastname = (TextView) FindViewById(Resource.Id.txtLastname);
+			var txtName = (TextView) FindViewById(Resource.Id.txtName);
 			var txtEmail = (TextView) FindViewById(Resource.Id.txtEmail);
 			var txtStreetNr = (TextView) FindViewById(Resource.Id.txtStreetNr);
 			var txtPostalCode = (TextView) FindViewById(Resource.Id.txtPostalCode);
 			var txtTown = (TextView) FindViewById(Resource.Id.txtTown);
 			var txtBankaccount = (TextView) FindViewById(Resource.Id.txtBankaccount);
 			var txtAmount = (TextView) FindViewById(Resource.Id.txtAmount);
-			txtFirstname.Text = firstname;
-			txtLastname.Text = lastname;
+			txtName.Text = firstname + " " +lastname;
 			txtEmail.Text = email;
 			txtStreetNr.Text = streetnr;
 			txtTown.Text = postalcode + " " + town;
 			txtBankaccount.Text = bankaccount;
-			txtAmount.Text = amount;
+			txtAmount.Text = "€" + amount;
 
 			Button btnChange = FindViewById<Button> (Resource.Id.btnChange);
 

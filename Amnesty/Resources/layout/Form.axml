@@ -13,17 +13,23 @@
         <TextView
             android:text="Persoonlijke informatie"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/TopLabelPersonal" />
+            android:id="@+id/TopLabelPersonal"
+            android:background="#ffffff00"
+            android:textColor="#ff000000"
+            android:padding="7dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="15dp" />
         <TextView
             android:text="@string/firstname"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/lblFirstname" />
+            android:id="@+id/lblFirstname"
+            android:textStyle="bold" />
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="355.5dp"
             android:layout_height="wrap_content"
             android:id="@+id/txtFirstname"
             android:hint="John"
@@ -33,7 +39,8 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/lblLastname" />
+            android:id="@+id/lblLastname"
+            android:textStyle="bold" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,7 +52,8 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/lblEmail" />
+            android:id="@+id/lblEmail"
+            android:textStyle="bold" />
         <EditText
             android:inputType="textEmailAddress"
             android:layout_width="match_parent"
@@ -58,7 +66,8 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView6" />
+            android:id="@+id/textView6"
+            android:textStyle="bold" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -82,7 +91,8 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/lblBankaccount" />
+            android:id="@+id/lblBankaccount"
+            android:textStyle="bold" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -92,15 +102,22 @@
         <TextView
             android:text="Welk bedrag wil je storten?"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView5" />
+            android:id="@+id/textView5"
+            android:textStyle="bold"
+            android:textColor="#ff000000"
+            android:background="#ffffff00"
+            android:padding="7dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp" />
         <TextView
             android:text="@string/amount"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/lblAmount" />
+            android:id="@+id/lblAmount"
+            android:textStyle="bold" />
         <EditText
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
@@ -109,9 +126,13 @@
             android:gravity="center"
             android:singleLine="true" />
         <Button
-            android:text="Ga verder"
+            android:text="Ga Verder"
+            android:id="@+id/btnConfirm"
+            android:background="#ffffffff"
+            android:textColor="#ff000000"
+            android:textStyle="bold"
+            android:typeface="sans"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnConfirm" />
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>

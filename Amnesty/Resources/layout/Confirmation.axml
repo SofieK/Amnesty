@@ -7,33 +7,37 @@
     android:minHeight="25px"
     android:padding="15dp">
     <TextView
+        android:text="Persoonlijke informatie"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TopLabelPersonal"
+        android:background="#ffffff00"
+        android:textColor="#ff000000"
+        android:padding="7dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp" />
+    <TextView
         android:text="Naam"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/textView2"
+        android:textStyle="bold"
+        android:textColor="#ff939598" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtFirstname" />
-    <TextView
-        android:text="@string/lastname"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtLastname" />
+        android:id="@+id/txtName" />
     <TextView
         android:text="@string/email"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView4" />
+        android:id="@+id/textView4"
+        android:textStyle="bold"
+        android:textColor="#ff939598" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
@@ -44,7 +48,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView8" />
+        android:id="@+id/textView8"
+        android:textStyle="bold"
+        android:textColor="#ff939598" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
@@ -60,7 +66,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView6" />
+        android:id="@+id/textView6"
+        android:textStyle="bold"
+        android:textColor="#ff939598" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
@@ -71,7 +79,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView7" />
+        android:id="@+id/textView7"
+        android:textStyle="bold"
+        android:textColor="#ff939598" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
@@ -79,17 +89,28 @@
         android:id="@+id/txtAmount" />
     <Button
         android:text="Ik wil nog iets aanpassen"
+        android:background="#ffffffff"
+        android:textColor="#ff000000"
+        android:textStyle="bold"
+        android:typeface="sans"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnChange" />
+        android:id="@+id/btnChange"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" />
     <CheckBox
         android:text="Ik ga akkoord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/chkConfirm" />
+        android:id="@+id/chkConfirm"
+        android:layout_marginBottom="10dp" />
     <Button
         android:text="Doneer nu!"
         android:id="@+id/btnDonate"
+        android:background="#ffffffff"
+        android:textColor="#ff000000"
+        android:textStyle="bold"
+        android:typeface="sans"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>

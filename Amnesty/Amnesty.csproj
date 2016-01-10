@@ -71,6 +71,8 @@
     <AndroidResource Include="Resources\layout\Confirmation.axml" />
     <AndroidResource Include="Resources\layout\Thankyou.axml" />
     <AndroidResource Include="Resources\layout\Form.axml" />
+    <AndroidResource Include="Resources\drawable\background.jpg" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

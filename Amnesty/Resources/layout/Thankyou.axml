@@ -5,18 +5,29 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/background"
+    android:padding="30dp">
     <TextView
         android:text="Bedankt voor uw donatie"
         android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtThanks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtThanks"
-        android:gravity="center"
-        android:layout_marginBottom="25dp" />
+        android:textStyle="bold"
+        android:textColor="#ff000000"
+        android:background="#ffffff00"
+        android:padding="7dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center" />
     <Button
         android:text="Terug naar begin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnHome" />
+        android:background="#ffffffff"
+        android:textColor="#ff000000"
+        android:id="@+id/btnHome"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

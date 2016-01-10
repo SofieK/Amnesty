@@ -5,19 +5,27 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:padding="15dp"
-    android:gravity="center">
-    <TextView
-        android:text="Amnesty International"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+    android:padding="30dp"
+    android:gravity="center"
+    android:background="@drawable/background">
+    <ImageView
+        android:src="@drawable/logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtCompanyName"
-        android:gravity="center"
-        android:layout_marginBottom="25dp" />
+        android:id="@+id/imageView1"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="centerInside"
+        android:fitsSystemWindows="false"
+        android:baselineAlignBottom="true"
+        android:paddingBottom="40dp" />
     <Button
         android:text="Doneer nu"
+        android:id="@+id/btnDonate"
+        android:background="#ffffffff"
+        android:textColor="#ff000000"
+        android:textStyle="bold"
+        android:typeface="sans"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnDonate" />
+        android:layout_height="wrap_content" />
 </LinearLayout>
